@@ -1,7 +1,14 @@
 {
   "es_root": {
     "policy_assignments": [
-      "Deploy-ASC-Monitoring"
+      "Deploy-ASC-Monitoring",
+      "Deploy-MDFC-Config",
+      "Deploy-AzActivity-Log",
+      "Deploy-LX-Arc-Monitoring",
+      "Deploy-Resource-Diag",
+      "Deploy-VM-Monitoring",
+      "Deploy-VMSS-Monitoring",
+      "Deploy-WS-Arc-Monitoring"
     ],
     "policy_definitions": [
       "Append-AppService-httpsonly",
@@ -115,7 +122,6 @@
       "Deny-PublicPaaSEndpoints",
       "Deploy-Diagnostics-LogAnalytics",
       "Deploy-MDFC-Config",
-      "Deploy-Private-DNS-Zones",
       "Deploy-Sql-Security",
       "Enforce-Encryption-CMK",
       "Enforce-EncryptTransit"

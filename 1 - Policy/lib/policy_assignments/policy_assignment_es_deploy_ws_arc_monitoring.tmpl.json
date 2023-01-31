@@ -1,0 +1,22 @@
+{
+  "name": "Deploy-WS-Arc-Monitoring",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "Deploys the Log Analytics agent to Windows Azure Arc machines if the agent isn't installed.",
+    "displayName": "Deploy-Windows-Arc-Monitoring",
+    "notScopes": [],
+    "parameters": {
+      "logAnalytics": {
+        "value": "/subscriptions/${managementsubid}/resourcegroups/ap-rg-mgmt-${region_short}/providers/Microsoft.OperationalInsights/workspaces/ap-log-mgmt-${region_short}"
+      }
+    },
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69af7d4a-7b18-4044-93a9-2651498ef203",
+    "scope": "${current_scope_resource_id}",
+    "enforcementMode": null
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "SystemAssigned"
+  }
+}
